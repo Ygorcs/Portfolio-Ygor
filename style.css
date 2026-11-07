@@ -75,3 +75,30 @@ footer {
     padding: 24px;
     color: var(--suave);
 }
+
+@media (max-width: 800px){
+    .pagina{
+        flex-direction: column;
+        padding: 24px;
+    }
+
+    header{
+        width:100%;
+        height: auto;
+        position: static;
+    }
+
+    h1{
+        font-size: 2rem;
+    }
+
+    main{
+        border-left: none;
+        padding-left: 0;
+    }
+
+    section{
+        min-height: auto;
+        padding: 32px 0;
+    }
+}
