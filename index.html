@@ -25,11 +25,12 @@
           <a href="#curriculo">Currículo</a>
           <a href="#contato">Contato</a>
         </nav>
+        <button id="botao-tema" type="button">Tema claro</button>
       </header>
       <main>
         <!-- Seção Sobre Mim -->
 
-        <section id="sobre-mim">
+        <section id="sobre-mim" class="revelar">
           <h2>Sobre Mim</h2>
           <p>
             Olá! Meu nome é Ygor Soares, sou estudante de Análise e
@@ -42,7 +43,7 @@
 
         <!-- Seção Projetos -->
 
-        <section id="projetos">
+        <section id="projetos"  class="revelar">
           <h2>Projetos</h2>
           <div class="cards">
             <article class="projeto">
@@ -67,7 +68,7 @@
 
         <!-- Seção Stack -->
 
-        <section id="stack">
+        <section id="stack" class="revelar">
           <h2>Stack</h2>
           <ul class="cards">
             <li>HTML</li>
@@ -81,22 +82,22 @@
 
         <!-- Seção Currículo -->
 
-        <section id="curriculo">
+        <section id="curriculo" class="revelar">
           <h2>Currículo</h2>
-          <p>
-            Informações sobre minha formação acadêmica e experiência
-            profissional.
-          </p>
+          <a class="botao" href="curriculo.pdf" download
+            >Baixar currículo (PDF)</a
+          >
         </section>
 
         <!-- Seção Contato -->
 
-        <section id="contato">
+        <section id="contato" class="revelar">
           <h2>Contato</h2>
-          <p>
-            Formulário para entrar em contato comigo ou saber mais sobre meu
-            trabalho.
-          </p>
+          <ul class="cards">
+            <li><a href="mailto:ygorsoares.cs@gmail.com">E-mail</a></li>
+            <li><a href="https://github.com/Ygorcs">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/ygor-soares-9859561ab/">LinkedIn</a></li>
+          </ul>
         </section>
       </main>
     </div>
@@ -105,3 +106,5 @@
     </footer>
   </body>
 </html>
+
+<script src="script.js"></script>
