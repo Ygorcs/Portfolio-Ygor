@@ -14,7 +14,7 @@ secoes.forEach((secao) => observador.observe(secao));
 const botaoTema = document.getElementById('botao-tema');
 
 if(localStorage.getItem('tema') === 'claro'){
-    document.body.classList.add('tema-claro');
+    document.body.classList.add('claro');
     botaoTema.textContent = 'Tema escuro';
 }
 
@@ -24,3 +24,26 @@ botaoTema.addEventListener('click', () => {
     localStorage.setItem('tema', claro ? 'claro' : 'escuro');
     botaoTema.textContent = claro ? 'Tema escuro' : 'Tema claro';
 });
+
+async function carregarProjetos() {
+    const lista = document.getElementById('lista-projetos');
+
+    try {
+        const resposta = await fetch('projetos.json');
+        const projetos = await resposta.json();
+
+        projetos.forEach((projeto) => {
+            lista.innerHTML += `
+                <article class="projeto">
+                    <h3>${projeto.titulo}</h3>
+                    <p>${projeto.descricao}</p>
+                    <a href="${projeto.link}">Ver código</a>
+                </article>
+            `;
+        });
+    } catch (erro) {
+        lista.textContent = 'Não foi possível carregar os projetos.';
+    }
+}
+
+carregarProjetos();
